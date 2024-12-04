@@ -24,7 +24,7 @@ const History = () => {
   }, []);
 
   if (!data) {
-    return <p>Betöltés...</p>;
+    return null;
   }
 
   const { cim, leiras } = data;

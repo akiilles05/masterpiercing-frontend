@@ -22,7 +22,7 @@ const Gondoskodas = () => {
   }, []);
 
   if (!data) {
-    return <p>Betöltés...</p>;
+    return null;
   }
 
   const {

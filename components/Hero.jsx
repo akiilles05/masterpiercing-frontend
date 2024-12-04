@@ -24,7 +24,7 @@ const Hero = () => {
   }, []);
 
   if (!data) {
-    return <p>Betöltés...</p>;
+    return null;
   }
 
   const { welcome, welcome_description, hero_image } = data;

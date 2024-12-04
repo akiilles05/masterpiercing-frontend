@@ -24,7 +24,7 @@ const Migren = () => {
   }, []);
 
   if (!data) {
-    return <p>Betöltés...</p>;
+    return null;
   }
 
   const { cim, leiras, logo } = data;
