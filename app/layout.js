@@ -1,15 +1,11 @@
-import localFont from "next/font/local";
+import { Urbanist } from "@next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const urbanist = Urbanist({
+  subsets: ["latin"],
+  weight: ["100", "400", "700", "900"], // Add the weights you need
+  variable: "--font-urbanist",
 });
 
 export const metadata = {
@@ -18,11 +14,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const siteUrl = "https://example.com";
+  const siteName = "Example Site";
+  const logoSrc = "/path-to-logo.gif";
+  const menus = {
+    desktop: [
+      { title: "Home", url: "/" },
+      { title: "About", url: "/about" },
+      { title: "Contact", url: "/contact" },
+    ],
+    mobile: [
+      { title: "Home", url: "/" },
+      { title: "About", url: "/about" },
+      { title: "Contact", url: "/contact" },
+    ],
+  };
+  const socialLinks = [
+    { icon: "InstagramIcon", url: "https://instagram.com" },
+    { icon: "FacebookIcon", url: "https://facebook.com" },
+  ];
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${urbanist.variable} antialiased`}>
+        <Navbar />
         {children}
       </body>
     </html>

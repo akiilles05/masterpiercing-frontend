@@ -3,19 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-urbanist: "Urbanist", sans-serif;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-urbanist);
+}
+
+ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+}
+
+ol {
+  margin-left: 1.5rem;
+  list-style-type: decimal;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
