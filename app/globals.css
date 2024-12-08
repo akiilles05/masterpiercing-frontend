@@ -23,3 +23,8 @@ ol {
 li {
   margin-bottom: 0.5rem;
 }
+
+input[type="checkbox"]:checked {
+  background-color: rgb(236, 193, 118);
+  border: 1px solid rgb(236, 193, 118);
+}
